@@ -14,12 +14,10 @@ public class HelpLinkTest extends BaseTest {
 
         // Step 1
         validateHelpElement();
-        webElementUtil.switchToOriginalTab();
         webElementUtil.clickButtonWithTitle("Add this collection");
 
         // Step 2
         validateHelpElement();
-        webElementUtil.switchToOriginalTab();
         webElementUtil.clickButtonWithText("Next");
 
         // Step 3
@@ -39,5 +37,6 @@ public class HelpLinkTest extends BaseTest {
         webElementUtil.switchToNewTab();
         webElementUtil.verifyPageTitle("Portal User Guide");
         webElementUtil.verifyInnerHtml("This is a guide for using the Australian Ocean Data Network (AODN) Portal.");
+        webElementUtil.switchToOriginalTab();
     }
 }
